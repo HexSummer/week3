@@ -1,0 +1,390 @@
+/* 統一設定 */
+*,*::before,*::after{
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft JhengHei", Roboto, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.5;
+  color:#3F5D45;
+  
+}
+
+a{
+  text-decoration: none;
+  font-weight:bold;
+  display: block;
+  color:#3F5D45;
+}
+
+img{ display: block; }
+
+/* 開始 */
+
+.container{
+  max-width: 940px;
+  margin: 0 auto;
+ 
+}
+
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px 0;
+
+  ul{
+    display: flex;
+    justify-content: center;
+    
+    a{
+      font-size:16px;
+      padding: 20px 30px;
+    }
+  }
+}
+
+.hamburgerMenu{ display: none;}
+
+.header-img {
+  width: 210px;
+  height: 40px;
+  background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/logo-all-dark.svg");
+  text-indent: 101%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+
+.banner{
+  img{
+    margin-bottom: 60px;
+  }
+}
+
+.content{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 76px;
+}
+
+.leftMenu{
+  li,h2{
+    width: 300px;
+    padding: 16px 0;
+    font-size: 24px;
+    line-height: 40px;
+    text-align: center;
+  }  
+  
+  h2{
+    background-color: #3F5D45;
+    color:#EAF0ED;
+  }
+    
+  li:hover{
+    background-color: #EAF0ED;
+  }
+  
+}
+
+.product{
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+
+  li{
+    margin: 0 0 20px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+    
+
+  .pin{
+    writing-mode: vertical-lr;
+    position: absolute;
+    left: 20px;
+    top: 0;
+    color: #EAF0ED;
+    font-size: 16px;
+    line-height: 20px;
+    background: #3F5D45;
+    padding: 10px;
+    font-weight: 100;
+  }
+
+  .like{
+    position: absolute;
+    top: 9px; /* 19-10 (扣padding)*/
+    right: 12px; /* 22-10 */
+    padding: 10px;/* 增加點擊範圍 top,right需減10px */
+  }
+
+  &-img{
+    position: relative;
+  }
+
+  &-text{
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    border: 1px solid #EAF0ED;
+  }
+}
+
+.name,.price{
+    padding: 14px 7px;
+    text-align: center;
+    font-size: 20px;
+    line-height: 28px;
+}
+.name{
+  width: 171px; 
+  border-right: 1px solid #EAF0ED;
+}
+.price{
+    width: 126px;
+}
+
+.addToCart{
+  width: 300px;
+  padding: 16px 0;
+  text-align: center;
+  font-size: 24px;
+  line-height: 20px;
+  background: #EAF0ED;
+
+}
+
+.page{
+  display: flex;
+  justify-content: flex-end;
+  
+  a{
+    width: 60px;
+    height: 60px;
+    border: solid 1px #EAF0ED;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: center;
+    padding: 16px;
+  }
+
+
+}
+
+.subscribe{
+  display: flex;
+  background: #3F5D45;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 0;
+
+  
+  label{
+    display: flex;
+    align-items: center;
+    
+    img{
+      width: 40px;
+      margin-right: 20px;
+    }
+  }
+
+  h2{
+    color: #EAF0ED;
+    font-size: 24px;
+    line-height: 29px;
+    margin-right: 124px;
+  }
+  
+}
+
+.footer{
+  background: #EAF0ED;
+  padding: 40px 122px 30px 122px;
+  
+  &-main{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+
+  &-content{
+    img{
+      width: 172px;
+      margin-bottom: 115px;
+    }
+    .info li{
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+
+  &-link{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+}
+
+.sns{
+  display: flex;
+  
+  img{
+    width: 32px;
+  }
+  li{
+    margin-right: 8px;
+  }
+}
+
+.copyright{
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.slogan{
+  font-size: 23px;
+  font-family: "Noto Serif TC";
+  font-weight: 600;
+  writing-mode: vertical-rl;
+  line-height: 1.5;
+  text-indent: -10px;
+  padding-top: 10px;/*調回text-indent的距離*/
+  letter-spacing: 6px;
+}
+.decorativeLine{
+  display: inline-block;
+  width: 0;
+  height: 48px;
+  border-right: 1px solid #3F5D45;
+}
+
+.mail{
+  background-image: url("https://github.com/hexschool/webLayoutTraining1st/blob/master/student-week1/mail-24px.png?raw=true");  
+  background-size: 24px;
+  background-repeat: no-repeat;
+  background-position: 20px, center;
+  text-indent: 60px;
+  border: none;
+  outline: none;
+  width: 316px;
+  height: 56px;
+}
+
+.submit{
+  background-image: url("https://github.com/hexschool/webLayoutTraining1st/blob/master/student-week1/arrow_forward-24px.png?raw=true");
+  background-size: 16px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #FFE180;
+  text-indent: 150%;
+  overflow: hidden;
+  width: 64px;
+  height: 56px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.addToCart, .pageNum{
+  &:hover{
+    background-color: #3F5D45;
+    color:#fff;
+  }
+}
+
+.front,.back{
+  &:hover{
+    background-color: #EAF0ED;
+  }
+}
+
+@media (max-width: 375px){
+  img{
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .container{
+    margin-top: 0;
+    max-width: 375px;
+  }
+
+  .header{
+     margin: 0;
+    
+    &-img{
+      background: url(https://hexschool.github.io/webLayoutTraining1st/student-week1/logotype-lg-dark.svg) no-repeat;
+      width: 115px;
+      height: 17px;
+    }
+  }
+  
+  .hamburgerMenu{ display: block;}
+  .nav{  display: none; }
+
+  .content{
+    flex-direction: column;
+  }
+
+  .leftMenu{
+    max-width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .product{
+    li{
+      align-content: center;
+    }
+  }
+
+  .page{
+    justify-content: center;
+  }
+  
+
+  .subscribe{
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 30px 40px;  
+    
+    label{ margin-bottom: 30px; }
+
+    h2{
+      margin-right: 0;   
+    }
+  }
+
+  .mail{ width: 80%;  }
+
+  .submit{ width: 20%;}
+
+  .footer{
+    padding: 30px 20px;
+
+    &-main{
+      flex-direction: column;
+    }
+    
+    &-link{
+      flex-wrap: wrap;
+    }
+    &-content{
+      img{
+        margin-bottom: 40px;
+      }
+    }
+  }
+
+  .slogan{
+    display: none;
+  }
+  
+  .copyright{
+    margin-top: 20px;
+  }
+}

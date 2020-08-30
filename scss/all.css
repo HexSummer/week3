@@ -1,0 +1,501 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* 統一設定 */
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft JhengHei", Roboto, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.5;
+  color: #3F5D45;
+}
+
+a {
+  text-decoration: none;
+  font-weight: bold;
+  display: block;
+  color: #3F5D45;
+}
+
+img {
+  display: block;
+}
+
+/* 開始 */
+.container {
+  max-width: 940px;
+  margin: 0 auto;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 30px 0;
+}
+
+.header ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.header ul a {
+  font-size: 16px;
+  padding: 20px 30px;
+}
+
+.hamburgerMenu {
+  display: none;
+}
+
+.header-img {
+  width: 210px;
+  height: 40px;
+  background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/logo-all-dark.svg");
+  text-indent: 101%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.banner img {
+  margin-bottom: 60px;
+}
+
+.content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 76px;
+}
+
+.leftMenu li, .leftMenu h2 {
+  width: 300px;
+  padding: 16px 0;
+  font-size: 24px;
+  line-height: 40px;
+  text-align: center;
+}
+
+.leftMenu h2 {
+  background-color: #3F5D45;
+  color: #EAF0ED;
+}
+
+.leftMenu li:hover {
+  background-color: #EAF0ED;
+}
+
+.product {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.product li {
+  margin: 0 0 20px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+.product .pin {
+  -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+          writing-mode: vertical-lr;
+  position: absolute;
+  left: 20px;
+  top: 0;
+  color: #EAF0ED;
+  font-size: 16px;
+  line-height: 20px;
+  background: #3F5D45;
+  padding: 10px;
+  font-weight: 100;
+}
+
+.product .like {
+  position: absolute;
+  top: 9px;
+  /* 19-10 (扣padding)*/
+  right: 12px;
+  /* 22-10 */
+  padding: 10px;
+  /* 增加點擊範圍 top,right需減10px */
+}
+
+.product-img {
+  position: relative;
+}
+
+.product-text {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid #EAF0ED;
+}
+
+.name, .price {
+  padding: 14px 7px;
+  text-align: center;
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.name {
+  width: 171px;
+  border-right: 1px solid #EAF0ED;
+}
+
+.price {
+  width: 126px;
+}
+
+.addToCart {
+  width: 300px;
+  padding: 16px 0;
+  text-align: center;
+  font-size: 24px;
+  line-height: 20px;
+  background: #EAF0ED;
+}
+
+.page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.page a {
+  width: 60px;
+  height: 60px;
+  border: solid 1px #EAF0ED;
+  font-size: 20px;
+  line-height: 20px;
+  text-align: center;
+  padding: 16px;
+}
+
+.subscribe {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #3F5D45;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 30px 0;
+}
+
+.subscribe label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.subscribe label img {
+  width: 40px;
+  margin-right: 20px;
+}
+
+.subscribe h2 {
+  color: #EAF0ED;
+  font-size: 24px;
+  line-height: 29px;
+  margin-right: 124px;
+}
+
+.footer {
+  background: #EAF0ED;
+  padding: 40px 122px 30px 122px;
+}
+
+.footer-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.footer-content img {
+  width: 172px;
+  margin-bottom: 115px;
+}
+
+.footer-content .info li {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.footer-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.sns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.sns img {
+  width: 32px;
+}
+
+.sns li {
+  margin-right: 8px;
+}
+
+.copyright {
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.slogan {
+  font-size: 23px;
+  font-family: "Noto Serif TC";
+  font-weight: 600;
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  line-height: 1.5;
+  text-indent: -10px;
+  padding-top: 10px;
+  /*調回text-indent的距離*/
+  letter-spacing: 6px;
+}
+
+.decorativeLine {
+  display: inline-block;
+  width: 0;
+  height: 48px;
+  border-right: 1px solid #3F5D45;
+}
+
+.mail {
+  background-image: url("https://github.com/hexschool/webLayoutTraining1st/blob/master/student-week1/mail-24px.png?raw=true");
+  background-size: 24px;
+  background-repeat: no-repeat;
+  background-position: 20px, center;
+  text-indent: 60px;
+  border: none;
+  outline: none;
+  width: 316px;
+  height: 56px;
+}
+
+.submit {
+  background-image: url("https://github.com/hexschool/webLayoutTraining1st/blob/master/student-week1/arrow_forward-24px.png?raw=true");
+  background-size: 16px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #FFE180;
+  text-indent: 150%;
+  overflow: hidden;
+  width: 64px;
+  height: 56px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.addToCart:hover, .pageNum:hover {
+  background-color: #3F5D45;
+  color: #fff;
+}
+
+.front:hover, .back:hover {
+  background-color: #EAF0ED;
+}
+
+@media (max-width: 375px) {
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  .container {
+    margin-top: 0;
+    max-width: 375px;
+  }
+  .header {
+    margin: 0;
+  }
+  .header-img {
+    background: url(https://hexschool.github.io/webLayoutTraining1st/student-week1/logotype-lg-dark.svg) no-repeat;
+    width: 115px;
+    height: 17px;
+  }
+  .hamburgerMenu {
+    display: block;
+  }
+  .nav {
+    display: none;
+  }
+  .content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .leftMenu {
+    max-width: 100%;
+    margin-bottom: 30px;
+  }
+  .product li {
+    -ms-flex-line-pack: center;
+        align-content: center;
+  }
+  .page {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .subscribe {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding: 30px 40px;
+  }
+  .subscribe label {
+    margin-bottom: 30px;
+  }
+  .subscribe h2 {
+    margin-right: 0;
+  }
+  .mail {
+    width: 80%;
+  }
+  .submit {
+    width: 20%;
+  }
+  .footer {
+    padding: 30px 20px;
+  }
+  .footer-main {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .footer-link {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .footer-content img {
+    margin-bottom: 40px;
+  }
+  .slogan {
+    display: none;
+  }
+  .copyright {
+    margin-top: 20px;
+  }
+}
+/*# sourceMappingURL=all.css.map */
